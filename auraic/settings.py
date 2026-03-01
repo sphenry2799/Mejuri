@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
  ]
 
-ROOT_URLCONF = 'mejuri.urls'
+ROOT_URLCONF = 'auraic.urls'
 
 TEMPLATES = [
     {
@@ -98,7 +98,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-WSGI_APPLICATION = 'mejuri.wsgi.application'
+WSGI_APPLICATION = 'auraic.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
