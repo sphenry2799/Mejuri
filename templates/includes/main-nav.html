@@ -13,13 +13,13 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="jewellery-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                Jewellery
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Watches</a>
-                <a href="" class="dropdown-item">Bracelets</a>
-                <a href="" class="dropdown-item">Necklaces</a>
+            <div class="dropdown-menu border-0" aria-labelledby="jewellery-link">
+                <a href="{% url 'products' %}?category=Watches" class="dropdown-item">Watches</a>
+                <a href="{% url 'products' %}?category=Bracelets" class="dropdown-item">Bracelets</a>
+                <a href="{% url 'products' %}?category=Necklaces" class="dropdown-item">Necklaces</a>
             </div>
         </li>
 
