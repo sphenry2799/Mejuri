@@ -114,18 +114,31 @@
     </div>
     </header>
 
-    {% if messages %}
-        <div class="message-container"></div>
-    {% endif %}
-    
-    {% block page_header %}
-    {% endblock %}
+ 
+  {% if messages %}
+  <div class="message-container">
 
-    {% block content %}
-    {% endblock %}
-    
-    {% block postloadjs %}
-    {% endblock %}
+    {% for message in messages %}
+     {% include 'includes/toasts/toast_success.html' %}
+    {% endfor %}
+
+  </div>
+  {% endif %}
+
+  {% block page_header %}
+  {% endblock %}
+
+  {% block content %}
+  {% endblock %}
+
+  {% block postloadjs %}
+
+  <script type="text/javascript">
+    $('.toast').toast('show');
+  </script>
+
+  {% endblock %}
+
     
   </body>
 </html>
