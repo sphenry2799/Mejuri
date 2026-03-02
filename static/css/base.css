@@ -108,19 +108,24 @@ a.category-badge > span.badge:hover {
 
 /* ------------------------------- bootstrap toasts */
 
+/* Container to hold all toasts in the top right */
 .message-container {
     position: fixed;
     top: 72px;
     right: 15px;
-    z-index: 99999999999;
+    z-index: 9999; /* Ensures it stays above your nav and product images */
 }
 
+/* Ensure the toast itself has a width and background */
 .custom-toast {
-    overflow: visible;
+    min-width: 280px;
+    max-width: 350px;
+    opacity: 1 !important; /* Force visibility */
+    display: block;
 }
 
 .toast-capper {
-    height: 2px;
+    height: 5px;
 }
 /* -------------------------------- Media Queries */
 
