@@ -1,29 +1,21 @@
-from django.contrib import admin
-from .models import Order, OrderLineItem
+from django.db.models.signals import post_save, post_delete
+from django.dispatch import receiver
+
+from .models import OrderLineItem
+
+@receiver(post_save, sender=OrderLineItem)
+def update_on_save(sender, instance, created, **kwargs):
+    """
+    Update order total on lineitem update/create
+    """
+    instance.order.update_total()
 
 
-class OrderLineItemAdminInline(admin.TabularInline):
-    model = OrderLineItem
-    readonly_fields = ('lineitem_total',)
-
-
-class OrderAdmin(admin.ModelAdmin):
-    inlines = (OrderLineItemAdminInline,)
-
-    readonly_fields = ('order_number', 'date',
-                       'delivery_cost', 'order_total',
-                       'grand_total',)
-
-    fields = ('order_number', 'date', 'full_name',
-              'email', 'phone_number', 'country',
-              'postcode', 'town_or_city', 'street_address1',
-              'street_address2', 'county', 'delivery_cost',
-              'order_total', 'grand_total',)
-
-    list_display = ('order_number', 'date', 'full_name',
-                    'order_total', 'delivery_cost',
-                    'grand_total',)
-
-    ordering = ('-date',)
-
-admin.site.register(Order, OrderAdmin)
+@receiver(post_delete, sender=OrderLineItem)
+def update_on_save(sender, instance, **kwargs):
+    # chris made a mistake here, this function should have 
+    # been called update_on_delete. He fixes this in an upcoming video.
+    """
+    Update order total on lineitem delete
+    """
+    instance.order.update_total()
