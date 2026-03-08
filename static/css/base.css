@@ -77,22 +77,15 @@ h1, h2, h3, h4 {
     min-width: 260px;
 }
 
-.shop-now-button:hover {
-    background: var(--third-color);
-    color: var(--light-color);
-    min-width: 260px;
-}
-
 .btn-black {
     background: var(--dark-color);
     color: var(--light-color);
 }
 
-
 .btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+    background: var(--light-color);
+    color: var(--dark-color)!important; /* use important to override link colors for <a> elements */
+    border: 1px solid var(--dark-color);
 }
 .btn-outline-black:hover,
 .btn-outline-black:active,
@@ -107,8 +100,8 @@ h1, h2, h3, h4 {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: white;
+    background: var(--secondary-color);
+    color: var(--dark-color);
 }
 
 .text-black {
@@ -153,6 +146,10 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+.card-body {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+}
 /* ------------------------------- bootstrap toasts */
 
 /* Container to hold all toasts in the top right */
