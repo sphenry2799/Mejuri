@@ -180,6 +180,12 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
+.image-uniform {
+    width: 25rem;
+    height: 18rem;
+    object-fit: contain;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
