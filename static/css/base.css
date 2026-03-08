@@ -1,16 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 
-html {
+html, body {
     height: 100%;
+    margin: 0;
 }
 
 body {
-    background: url('/media/mejuri-background-image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
-    font-family: 'Lato';
+    display: flex;
+    flex-direction: column;
+    min-height: 150vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* CSS Variables */
+:root {
+  --primary-font: "Inter", sans-serif;
+  /* --secondary-font: "Macondo", serif; */
+  --primary-color: #002e2c;
+  --secondary-color: #dead3c;
+  --third-color: #660300;
+  --light-color: #fcfcfc;
+  --dark-color: #000000;
+  --background-color: rgba(8, 8, 8, 0.5);
+  --bs-gutter-x: 0;
+}
+
+
+body {
+    background-image: url('/media/mejuri-background-image.jpg') !important; 
+    background-repeat: no-repeat !important; 
+    background-position: center !important;       
+    background-size: cover !important;          
+    min-height: 100vh !important; 
 }
 
 /* from Bulma */
@@ -186,6 +211,24 @@ a.category-badge > span.badge:hover {
     object-fit: contain;
 }
 
+/* Footer section */
+.footer-color {
+    background-color: var(--third-color);
+    color: var(--light-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.7rem;
+    padding: 0;
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+.media {
+    font-size: 1rem;
+    color: var(--light-color);
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
