@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 
 
 html, body {
@@ -18,8 +19,8 @@ main {
 
 /* CSS Variables */
 :root {
-  --primary-font: "Inter", sans-serif;
-  /* --secondary-font: "Macondo", serif; */
+  --primary-font: "Lato", sans-serif;
+  --secondary-font: "Playfair Display", serif;
   --primary-color: #002e2c;
   --secondary-color: #dead3c;
   --third-color: #660300;
@@ -38,6 +39,10 @@ body {
     min-height: 100vh !important; 
 }
 
+h1, h2, h3, h4 {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+}
 /* from Bulma */
 .icon {
     align-items: center;
@@ -49,6 +54,17 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    color: var(--light-color);
+}
+
+.logo {
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.h2-font {
+    text-transform: uppercase;
+    color: var(--primary-color);
 }
 
 .main-logo-link {
@@ -56,14 +72,20 @@ body {
 }
 
 .shop-now-button {
-    background: black;
-    color: white;
+    background: var(--dark-color);
+    color: var(--light-color);
+    min-width: 260px;
+}
+
+.shop-now-button:hover {
+    background: var(--third-color);
+    color: var(--light-color);
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
-    color: white;
+    background: var(--dark-color);
+    color: var(--light-color);
 }
 
 
@@ -222,7 +244,10 @@ a.category-badge > span.badge:hover {
     gap: 0.7rem;
     padding: 0;
     margin: 0;
-    color: var(--secondary-color);
+}
+
+.social-icons a {
+   color: var(--light-color);
 }
 
 .media {
