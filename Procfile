@@ -1,1 +1,2 @@
-web: gunicorn auraic.wsgi.application
+web: gunicorn auraic.wsgi:application
+
