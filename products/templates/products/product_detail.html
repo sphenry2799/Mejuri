@@ -19,6 +19,10 @@
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
+                      {% elif product.image_url %}
+                        <a href="{{ product.image_url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
+                        </a>
                         {% else %}
                         <a href="">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
