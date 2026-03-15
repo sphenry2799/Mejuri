@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* CSS Variables */
+:root {
+  --primary-font: "Lato", sans-serif;
+  --secondary-font: "Playfair Display", serif;
+  --primary-color: #002e2c;
+  --secondary-color: #dead3c;
+  --third-color: #660300;
+  --light-color: #fcfcfc;
+  --dark-color: #000000;
+  --background-color: rgba(8, 8, 8, 0.5);
+  --bs-gutter-x: 0;
+}
+
+
+body {
+    background-image: url('/media/mejuri-background-image.jpg') !important; 
+    background-repeat: no-repeat !important; 
+    background-position: center !important;       
+    background-size: cover !important;          
+    min-height: 100vh !important; 
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+}
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+    color: var(--light-color);
+}
+
+.logo {
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.h2-font {
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: var(--dark-color);
+    color: var(--light-color);
+    min-width: 260px;
+}
+
+.btn-black {
+    background: var(--dark-color);
+    color: var(--light-color);
+}
+
+.btn-outline-black {
+    background: var(--light-color);
+    color: var(--dark-color)!important; /* use important to override link colors for <a> elements */
+    border: 1px solid var(--dark-color);
+}
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+
+.bg-black {
+    background: #000 !important;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+.card-body {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+/* ------------------------------- bootstrap toasts */
+
+/* Container to hold all toasts in the top right */
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 9999; /* Ensures it stays above your nav and product images */
+}
+
+/* Ensure the toast itself has a width and background */
+.custom-toast {
+    min-width: 280px;
+    max-width: 350px;
+    opacity: 1 !important; /* Force visibility */
+    display: block;
+}
+
+.toast-capper {
+    height: 5px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.image-uniform {
+    width: 25rem;
+    height: 18rem;
+    object-fit: contain;
+}
+
+/* Footer section */
+.footer-color {
+    background-color: var(--third-color);
+    color: var(--light-color);
+    width: 100%;
+    margin-top: auto;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.7rem;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons a {
+   color: var(--light-color);
+}
+
+.media {
+    font-size: 1rem;
+    color: var(--light-color);
+}
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #6c757d; /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+	color: #17a2b8; /* text-info */
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
