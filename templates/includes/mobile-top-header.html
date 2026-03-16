@@ -1,4 +1,7 @@
-        <!-- Mobile Menu -->
+{% load static %}
+<!-- Mobile Menu -->
+<nav>
+    <div>
         <ul class="navbar-nav d-lg-none list-inline mb-0 w-100">
             <!-- Mobile Search -->
             <li class="list-inline-item">
@@ -6,21 +9,21 @@
                    aria-haspopup="true" aria-expanded="false">
                     <div class="text-center">
                         <div><i class="fas fa-search fa-lg"></i></div>
-                        <p class="my-0">Search</p>
+                            <p class="my-0">Search</p>
                     </div>
                 </a>
                 <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" role="menu" aria-labelledby="mobile-search">
-                    <form class="form" method="GET" action="{% url 'products' %}">
-                        <div class="input-group w-100">
-                            <input class="form-control border border-black rounded-0" type="text" name="q"
-                                   placeholder="Search our site">
-                            <div class="input-group-append">
-                                <button class="btn btn-black border border-black rounded-0" type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
+                        <form class="form" method="GET" action="{% url 'products' %}">
+                            <div class="input-group w-100">
+                                <input class="form-control border border-black rounded-0" type="text" name="q"
+                                    placeholder="Search our site">
+                                <div class="input-group-append">
+                                    <button class="btn btn-black border border-black rounded-0" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
                 </div>
             </li>
 
@@ -53,13 +56,13 @@
                    href="{% url 'view_bag' %}">
                     <div class="text-center">
                         <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                        <p class="my-0">
-                            {% if grand_total %}
-                                ${{ grand_total|floatformat:2 }}
-                            {% else %}
-                                $0.00
-                            {% endif %}
-                        </p>
+                            <p class="my-0">
+                                {% if grand_total %}
+                                    ${{ grand_total|floatformat:2 }}
+                                {% else %}
+                                    $0.00
+                                {% endif %}
+                            </p>
                     </div>
                 </a>
             </li>
