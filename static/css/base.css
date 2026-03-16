@@ -3,9 +3,10 @@
 
 
 html, body {
+    background: url('https://res.cloudinary.com/dfts2mz43/image/upload/v1773669953/mejuri-background-image_jhrh3h.jpg') center / cover no-repeat;
     margin: 0;
     padding: 0;
-    width: 100%;
+    min-height: 100%;
 }
 
 body {
@@ -31,13 +32,8 @@ main {
   --bs-gutter-x: 0;
 }
 
-
-body {
-    background-image: url('/media/mejuri-background-image.jpg') !important; 
-    background-repeat: no-repeat !important; 
-    background-position: center !important;       
-    background-size: cover !important;          
-    min-height: 100vh !important; 
+footer {
+    margin: 0;
 }
 
 h1, h2, h3, h4 {
@@ -241,7 +237,7 @@ input[name='q']::placeholder {
     background-color: var(--third-color);
     color: var(--light-color);
     width: 100%;
-    margin-top: auto;
+    /* margin-top: auto; */
 }
 
 .social-icons {
@@ -358,17 +354,17 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 11rem;
     }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 8rem;
     }
 
     body {
-        height: calc(100vh - 116px);
+        height: calc(100vh - 8rem);
     }
 }
