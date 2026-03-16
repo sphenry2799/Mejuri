@@ -3,8 +3,6 @@
 
 
 html, body {
-    background: url('https://res.cloudinary.com/dfts2mz43/image/upload/v1773669953/mejuri-background-image_jhrh3h.jpg') center / cover no-repeat;
-    margin: 0;
     padding: 0;
     min-height: 100%;
 }
@@ -15,6 +13,10 @@ body {
     min-height: 100vh;
 }
 
+.home {
+    background: url('https://res.cloudinary.com/dfts2mz43/image/upload/v1773669953/mejuri-background-image_jhrh3h.jpg') center / cover no-repeat;
+    margin: 0;
+}
 main {
     flex: 1;
 }
