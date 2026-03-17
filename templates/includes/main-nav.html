@@ -12,10 +12,10 @@
             <div class="dropdown-menu border-0"
                  role="menu"
                  aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'products:products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products:products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
+                <a href="{% url 'products:products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
+                <a href="{% url 'products:products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
 
@@ -31,9 +31,9 @@
             <div class="dropdown-menu border-0"
                  role="menu"
                  aria-labelledby="jewellery-link">
-                <a href="{% url 'products' %}?category=Watches" class="dropdown-item">Watches</a>
-                <a href="{% url 'products' %}?category=Bracelets" class="dropdown-item">Bracelets</a>
-                <a href="{% url 'products' %}?category=Necklaces" class="dropdown-item">Necklaces</a>
+                <a href="{% url 'products:products' %}?category=Watches" class="dropdown-item">Watches</a>
+                <a href="{% url 'products:products' %}?category=Bracelets" class="dropdown-item">Bracelets</a>
+                <a href="{% url 'products:products' %}?category=Necklaces" class="dropdown-item">Necklaces</a>
             </div>
         </li>
     </ul>
