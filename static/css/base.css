@@ -13,6 +13,10 @@ body {
     min-height: 100vh;
 }
 
+body .text-muted {
+    color:  #5d646b;
+}
+    
 .home::before {
     content: "";
     position: fixed;
@@ -156,7 +160,7 @@ a.category-badge > span.badge:hover {
 }
 
 input[name='q']::placeholder {
-    color: #aab7c4;
+    color:  #5d646b;
 }
 
 /* ------------------------------- bootstrap toasts */
